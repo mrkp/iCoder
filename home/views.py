@@ -1,13 +1,16 @@
 from django.contrib.auth import authenticate,login,logout
 from django.shortcuts import render,redirect
-from django.contrib import messages
 from django.contrib.auth.models import User
-from .models import Contact
+from django.contrib import messages
+from home.models import Contact
 from blog.models import Post
 # Create your views here.
 
+# HTML Pages
 def home(request):
-    return render(request, 'home/home.html')
+    allPosts = Post.objects.filter(category__icontains = 'Tech')
+    params = {'allPosts':allPosts}
+    return render(request, 'home/home.html', params)
 
 def about(request):
     return render(request, 'home/about.html')
@@ -48,6 +51,7 @@ def search(request):
     params = {'allPosts':allPosts, 'query': query}
     return render(request, 'home/search.html', params)
 
+# Authentication APIs
 def handleSignup(request):
     if request.method == 'POST':
         # Gets Post Parameters

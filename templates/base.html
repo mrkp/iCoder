@@ -5,11 +5,9 @@
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
 
   <title>{% block title %} {% endblock title %}</title>
 
@@ -41,7 +39,6 @@
           <a class="nav-link" href="/contact">Contact</a>
         </li>
       </ul>
-
       <div class="ml-auto form-inline mr-4">
         <form method="GET" action="/search" class="my-2 my-lg-0 mx-3">
           <input name="query" id="query" class="form-control mr-sm-2" type="search" placeholder="Search"
@@ -59,19 +56,16 @@
               {{request.user}}
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
               <a class="dropdown-item" href="/logout">Logout</a>
             </div>
           </li>
         </ul>
-
         {% else %}
         <!-- Button to trigger Login Modal trigger modal -->
         <button type="button" class="btn btn-info mx-2" data-toggle="modal" data-target="#loginModal">Login</button>
         <!-- Button to trigger SignUp Modal trigger modal -->
         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#signupModal">SignUp</button>
-
-      {% endif %}
+        {% endif %}
       </div>
     </div>
   </nav>
@@ -84,7 +78,6 @@
     </button>
   </div>
   {% endfor %}
-
 
   <!-- SignUp Modal -->
   <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModal" aria-hidden="true">
@@ -174,18 +167,20 @@
       </div>
     </div>
   </div>
-
+  
+  
   {% block body %}
-
+  
   {% endblock body %}
-
-  <!-- Start: Custom Js -->
-  <script>
-    $(".alert").delay(4000).slideUp(200, function () {
-      $(this).alert('close');
-    });
-  </script>
-  <!-- End: Custom Js-->
+  
+  <footer class="container-fluid bg-dark my-0 py-3 text-light">
+    <p class="mb-0 text-center">© 2020-2021 mrkaushal.tech</p>
+    <p class="mb-0 text-center">
+      <a href="#">Back to top |</a>
+      <a href="#">Privacy |</a>
+      <a href="#">Terms</a>
+    </p>
+  </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -197,6 +192,27 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
   </script>
+  
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.9/typed.min.js" async="" defer=""></script>
+  
+  <script>
+    window.onload = function () {
+      console.log("loaded")
+      var typed = new Typed('#typed', {
+        strings: ["Welcome to iCoder", "Learn Python", "Web development", "Data Science",
+        "Machine Learning", "and other awesome programming concepts with me :)"
+        ],
+        backSpeed: 15,
+        smartBackspace: true,
+        backDelay: 1200,
+        startDelay: 1000,
+        typeSpeed: 25,
+        loop: true,
+      });
+    };
+  </script>
+  
 </body>
-
-</html>
+  </html>
