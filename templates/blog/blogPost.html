@@ -6,8 +6,8 @@
 {% block body %}
 <div class="container my-3">
     <h1 class="blog-post-title">{{post.title}}</h1>
-    <p class="blog-post-meta">Category: {{post.category}} - {{post.created_at}} by <a href="/about">{{post.author}}</a>
-    </p>
+    <p class="blog-post-meta">Category: {{post.category}} - {{post.created_at}} by <a href="/about">{{post.author}}</a> <span>({{post.views}} Views)</span></p>
+    
 
     <p>{{post.content | safe }}</p>
     <hr>
