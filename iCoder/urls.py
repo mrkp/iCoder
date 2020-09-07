@@ -16,6 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+
 
 admin.site.site_header = "iCoder Admin"
 admin.site.site_title = "iCoder Admin Panel"
@@ -26,3 +30,8 @@ urlpatterns = [
     path('', include('home.urls')),
     path('blog/', include('blog.urls')),
 ]
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns = urlpatterns+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# urlpatterns = patterns('', (r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),)
+# if settings.DEBUG: # new
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

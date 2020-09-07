@@ -8,7 +8,7 @@
     <h1 class="blog-post-title">{{post.title}}</h1>
     <p class="blog-post-meta">Category: {{post.category}} - {{post.created_at}} by <a href="/about">{{post.author}}</a> <span>({{post.views}} Views)</span></p>
     
-
+     <img src="{{ request.scheme }}://{{ request.get_host }}/media/{{post.image}}" alt="{{post.title}}" width="200" height="270">
     <p>{{post.content | safe }}</p>
     <hr>
 
