@@ -7,6 +7,7 @@ class Contact(models.Model):
     name = models.CharField(max_length=50)
     phone = models.CharField(max_length=13)
     email = models.EmailField()
+    subject = models.CharField(max_length=25, null=False)
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True, blank=True)
 
