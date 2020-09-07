@@ -29,7 +29,7 @@ SECRET_KEY = 'j5tb2cawta@kmgq^+^3(hzyp@2vx^n66*+v#+(omkp5dlhm5lc'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://icodebase.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
