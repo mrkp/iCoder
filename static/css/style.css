@@ -1,0 +1,28 @@
+.top-margin{
+    margin-top:65px !important;
+}
+
+.about-margin-top{
+    margin-top:105px !important;
+}
+
+.contact-margin-top{
+    margin-top:105px !important;
+}
+.card-image-width{
+    width: 150px !important;
+}
+.footer-link{
+    color: white;
+}
+.footer-link:hover{
+    color: #ff9800;
+    text-decoration: none;
+}
+
+.page-link{
+    color: lightseagreen;
+}
+.page-link:hover{
+    color: #ff9800;
+}

@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block homeactive %} active {% endblock homeactive %}
 {% block title %} Home {% endblock title %}
 
 {% block body %}
 <section class="jumbotron text-center">
     <div class="container">
-      <img src="/static/home/img/photo.png" alt="logo" width="120">
+      <img src="{% static "img/logo.png" %}" alt="logo" width="150px">
       <h1 class="jumbotron-heading"><span id="typed">Welcome to Code</span><span class="typed-cursor"></span></h1>
       <p class="lead text-muted">Confused on which course to take? I have got you covered. Browse courses and find out
         the best course for you. Its free!<br>Code With Harry is my attempt to teach basics and those coding
@@ -27,7 +28,7 @@
 <div class="container">
     <div class="row">
       <div class="card mx-auto my-2 p-2 align-items-center" style="width: 18rem;">
-        <img src="/static/home/img/coding.jpg" class="padded card-img-top" alt="...">
+        <img src="{% static "img/card/video.png" %}" class="padded card-img-top card-image-width" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center">Free Video Courses</h5>
           <p class="card-text text-center">Get your programming career started with these free video courses. Source
@@ -38,7 +39,7 @@
       </div>
 
       <div class="card mx-auto my-2 p-2 align-items-center" style="width: 18rem;">
-        <img src="/static/home/img/lambda.png" class="padded card-img-top" alt="...">
+        <img src="{% static "img/card/blog.png" %}" class="padded card-img-top card-image-width" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center">Coding Articles</h5>
           <p class="card-text text-center">Some of the latest coding information compiled as coding articles. Keep your
@@ -48,7 +49,7 @@
       </div>
 
       <div class="card mx-auto my-2 p-2 align-items-center" style="width: 18rem;">
-        <img src="/static/home/img/python.png" class="padded card-img-top" alt="...">
+        <img src="{% static "img/card/contact.png" %}" class="padded card-img-top card-image-width" alt="...">
         <div class="card-body">
           <h5 class="card-title text-center">Contact Me</h5>
           <p class="card-text text-center">Learn programming from our free courses. Examples are available with these

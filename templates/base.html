@@ -7,15 +7,15 @@
   <meta charset="utf-8" />
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="{% static "css/style.css" %}">
 
   <title>{% block title %} {% endblock title %}</title>
 
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="/">iCoder</a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="/"><img src="{% static "img/kfavicon.png" %}" alt="logo" width="40px"><span style="width: 500px !important">P</span></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -169,12 +169,14 @@
   </div>
   
   
-  {% block body %}
+  <div class="top-margin">
+    {% block body %}
   
-  {% endblock body %}
+    {% endblock body %}
+  </div>
   
   <footer class="container-fluid bg-dark my-0 py-3 text-light">
-    <p class="mb-0 text-center">© 2020-2021 mrkaushal.tech</p>
+    <p class="mb-0 text-center">© 2019-{% now "Y" %} <a href="https://mrkaushal.com" target="_blank" class="footer-link">mrkaushal.com</a></p>
     <p class="mb-0 text-center">
       <a href="#">Back to top |</a>
       <a href="#">Privacy |</a>

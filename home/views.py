@@ -33,6 +33,7 @@ def contact(request):
             )
             contact.save()
             messages.success(request, "Your message has been send")
+            return redirect('/contact')
 
     return render(request, 'home/contact.html')
 
